@@ -32,7 +32,7 @@ def on_close(ws, close_status_code, close_msg):
 def on_open(ws):
     message = { "action": "init" }
     ws.send(json.dumps(message))
-    message = { "action": "want", "data": ['stats'] }
+    message = { "action": "want", "data": ['live-2h-chart'] }
     ws.send(json.dumps(message))
 
 if __name__ == "__main__":
